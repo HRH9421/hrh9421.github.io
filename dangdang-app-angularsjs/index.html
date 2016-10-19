@@ -23,24 +23,25 @@
                     <div ng-view style="background-color:#999999;">
                     </div>
                 </div>
-                <div class="weui-tabbar" ng-controller='mainController'>
-                    <a href="#/" ng-click='linkTo(0)'  class="weui-tabbar__item weui-bar__item_on">
-                        <img src="./assets/images/icon_tabbar.png" alt="" class="weui-tabbar__icon">
-                        <p class="weui-tabbar__label">首页</p>
-                    </a>
-                    <a href="#/blog" ng-click='linkTo(1)'  class="weui-tabbar__item">
-                        <img src="./assets/images/icon_tabbar.png" alt="" class="weui-tabbar__icon">
-                        <p class="weui-tabbar__label">我的blog</p>
-                    </a>
-                    <a href="#/list" ng-click='linkTo(2)'  class="weui-tabbar__item">
-                        <img src="./assets/images/icon_tabbar.png" alt="" class="weui-tabbar__icon">
-                        <p class="weui-tabbar__label">当当热销</p>
-                    </a>
-                    <a href="#/about_me" ng-click='linkTo(3)'  class="weui-tabbar__item">
-                        <img src="./assets/images/icon_tabbar.png" alt="" class="weui-tabbar__icon">
-                        <p class="weui-tabbar__label">联系我</p>
-                    </a>
-                </div>
+
+                <div class="weui-tabbar" ng-controller='footerCtrl'>
+                <a href="#/" ng-click='linkTo(0)' class="weui-tabbar__item {{selectedIndex==0?'weui-bar__item_on':''}}">
+                    <img src="./assets/images/icon_tabbar.png" alt="" class="weui-tabbar__icon">
+                    <p class="weui-tabbar__label">微信</p>
+                </a>
+                <a href="#/blog" ng-click='linkTo(1)' class="weui-tabbar__item {{selectedIndex==1?'weui-bar__item_on':''}}" >
+                    <img src="./assets/images/icon_tabbar.png" alt="" class="weui-tabbar__icon">
+                    <p class="weui-tabbar__label">通讯录</p>
+                </a>
+                <a href="#/book" ng-click='linkTo(2)' class="weui-tabbar__item {{selectedIndex==2?'weui-bar__item_on':''}}">
+                    <img src="./assets/images/icon_tabbar.png" alt="" class="weui-tabbar__icon">
+                    <p class="weui-tabbar__label">发现</p>
+                </a>
+                <a href="#/about_me" ng-click='linkTo(3)' class="weui-tabbar__item {{selectedIndex==3?'weui-bar__item_on':''}}">
+                    <img src="./assets/images/icon_tabbar.png" alt="" class="weui-tabbar__icon">
+                    <p class="weui-tabbar__label">我</p>
+                </a>
+            </div>
             </div>
         </div>
 
@@ -49,8 +50,8 @@
 
 
 
-    <script src='assets/lib/angular.js'></script>
-    <script src="assets/lib/angular-route.js"></script>
+    <script src='assets/lib/angular.min.js'></script>
+    <script src="assets/lib/angular-route.min.js"></script>
     <script src='assets/app.js'></script>
     <script src='assets/api/service.js'></script>
     <script src="assets/controllers/main_controller.js"></script>
