@@ -7,6 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="assets/lib/weui/weui.css">
     <title>当当网热搜榜</title>
+    <style>
+  html,body,.container{
+    height: 100%;
+  }
+  </style>
 </head>
 
 <body>
@@ -15,7 +20,7 @@
 
 
 
-    <div ng-app='app' >
+    <div ng-app='app' ontouchstart class="container" >
         <div ng-view></div>
         <div class="page__bd" style="height: 100%;">
             <div class="weui-tab">
@@ -24,7 +29,7 @@
                     </div>
                 </div>
 
-                <div class="weui-tabbar" ng-controller='footerCtrl'>
+                <div class="weui-tabbar" ng-controller='mainController'>
                 <a href="#/" ng-click='linkTo(0)' class="weui-tabbar__item {{selectedIndex==0?'weui-bar__item_on':''}}">
                     <img src="./assets/images/icon_tabbar.png" alt="" class="weui-tabbar__icon">
                     <p class="weui-tabbar__label">微信</p>

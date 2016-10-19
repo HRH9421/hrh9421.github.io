@@ -1,5 +1,8 @@
 
 var app = angular.module('app',['ngRoute'])
+
+
+
 app.config(['$routeProvider'],function($routeProvider){
   $routeProvider
     .when('/',{
@@ -18,13 +21,11 @@ app.config(['$routeProvider'],function($routeProvider){
       templateUrl:'./tpl/about_me.html',
       controller:''
     })
+    .when('/book_list',{
+      templateUrl:'./assets/tpl/book_list.html',
+      controller:'bookListController'
+    })
     .otherwise({
       redirectTo:'/'
     })
 })
-app.controller('footerCtrl',['$scope',function($scope){
-  $scope.selectedIndex = 0;
-  $scope.linkTo = function(index){
-    $scope.selectedIndex = index;
-  }
-}])
