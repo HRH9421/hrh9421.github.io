@@ -1,8 +1,8 @@
-var app = angular.module('app',['ngRoute']);
-
-app.config(['$routeProvider',function($routeProvider){
+var app = angular.module('app', ['ngRoute']);
+app.config(['$routeProvider', function($routeProvider) {
     $routeProvider
-            .when('/',{
-                templateUrl:'/assets/tpl/index.html'
-            })
+        .when('/basics', {
+            templateUrl: './assets/tpl/index.html',
+            controller: ''
+        })
 }])
