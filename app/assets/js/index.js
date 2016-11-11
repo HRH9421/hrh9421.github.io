@@ -6,7 +6,7 @@ var cityCode = '';
 
 function getCityCode(city) {
     $.ajax({
-        url: 'http://apis.baidu.com/apistore/weatherservice/cityinfo',
+        url: 'https://apis.baidu.com/apistore/weatherservice/cityinfo',
         data: {
             cityname: city
 
@@ -37,7 +37,7 @@ function getCityCode(city) {
 
 function getDayStatus(code, city) {
     $.ajax({
-        url: 'http://apis.baidu.com/apistore/weatherservice/recentweathers',
+        url: 'https://apis.baidu.com/apistore/weatherservice/recentweathers',
         data: {
             cityname: city,
             cityid: code
